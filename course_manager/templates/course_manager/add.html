@@ -1,0 +1,13 @@
+{% extends "course_manager/layout.html" %}
+
+{% block body %}
+<h2 style="margin-left: 10px; padding-bottom: 10px;">Add Course</h2>
+<div style="margin-left: 20px; margin-right: 20px;" class="form-group">
+    <form action="{% url 'add' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Post"/>
+    </form>
+</div>
+
+{% endblock %}

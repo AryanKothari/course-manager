@@ -1,0 +1,28 @@
+{% extends "course_manager/layout.html" %}
+
+{% block body %}
+<div id="courses">
+{% for course in courses %}
+<h1>Course Catalog</h1>
+<div class="alert alert-info course-block" role="alert">
+    <span>
+    <h1 class="course-header"><b>{{course.title}}</b> by Professor <b>{{course.professor}}</b></h1>
+    <p style="text-align: center; margin-top: -34px; margin-left: 200px;">{{course.day}} @ {{course.start_time}} to {{course.end_time}}</p>
+    <button class="btn btn-info see-more view-course" data-course_id={{course.id}}>See More</button>
+    {% if course.id in enrolled_courses %}
+    <a href="{% url 'unenroll_course' course.title %}"><button type="button" class="btn btn-danger unenroll-button">Unenroll</button></a>
+    {% else %}
+    <a href="{% url 'enroll_course' course.title %}"><button type="button" class="btn btn-success enroll-button">Enroll</button></a>
+    {% endif %}
+    </span>
+</div>
+{% endfor %}
+</div>
+
+<div id='course_view'>
+    <h1>hello motherfucka</h1>
+</div>
+
+
+
+{% endblock %}

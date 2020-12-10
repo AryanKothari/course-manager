@@ -1,0 +1,38 @@
+h1,h2,h3,h4,h5{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.course-block {
+    width: 97%;
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.enroll-button {
+    float: right;
+    margin-top: -45px;
+    width: 5%;
+    margin-right: 10px;
+}
+
+.unenroll-button {
+    float: right;
+    margin-top: -45px;
+    width: 6%;
+    margin-right: 20px;
+}
+
+.course-header {
+    color: black;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 5px;
+}
+
+.see-more {
+    float: right;
+    margin-top: -45px;
+    margin-right: 120px;
+    width: 8%;
+}
