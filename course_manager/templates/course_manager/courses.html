@@ -2,8 +2,8 @@
 
 {% block body %}
 <div id="courses">
-{% for course in courses %}
 <h1>Course Catalog</h1>
+{% for course in courses %}
 <div class="alert alert-info course-block" role="alert">
     <span>
     <h1 class="course-header"><b>{{course.title}}</b> by Professor <b>{{course.professor}}</b></h1>
