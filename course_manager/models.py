@@ -7,13 +7,11 @@ from multiselectfield import MultiSelectField
 class Course(models.Model):
 
     DAYS_OF_WEEK_CHOICES = (
-    ('SUN', 'Sunday'),
     ('MON', 'Monday'),
     ('TUE', 'Tuesday'),
     ('WED', 'Wednesday'),
     ('THU', 'Thursday'),
     ('FRI', 'Friday'),
-    ('SAT', 'Saturday'),
 )
     title = models.CharField(max_length=64, unique=True)
     description = models.TextField()

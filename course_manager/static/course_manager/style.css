@@ -1,4 +1,4 @@
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5,p{
     margin-left: 15px;
     margin-top: 10px;
     font-family: 'Courier New', Courier, monospace;
@@ -13,7 +13,7 @@ h1,h2,h3,h4,h5{
     float: right;
     margin-top: -45px;
     width: 5%;
-    margin-right: 10px;
+    margin-right: 25px;
 }
 
 .unenroll-button {

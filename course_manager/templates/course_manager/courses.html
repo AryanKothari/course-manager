@@ -1,10 +1,10 @@
 {% extends "course_manager/layout.html" %}
 
 {% block body %}
+<h2 id="header" style="margin-left: 40%; margin-top: 25px; padding-bottom: 10px; align-items: center;"><b>Course Catalog</b></h2>
 <div id="courses">
-<h1>Course Catalog</h1>
 {% for course in courses %}
-<div class="alert alert-info course-block" role="alert">
+<div class="alert alert-primary course-block" role="alert" data-course_id={{course.id}}>
     <span>
     <h1 class="course-header"><b>{{course.title}}</b> by Professor <b>{{course.professor}}</b></h1>
     <p style="text-align: center; margin-top: -34px; margin-left: 200px;">{{course.day}} @ {{course.start_time}} to {{course.end_time}}</p>
@@ -20,7 +20,13 @@
 </div>
 
 <div id='course_view'>
-    <h1>hello motherfucka</h1>
+    <button id="go-back" style="float: right; margin-top: -50px; margin-right: 20px; size: 150%;" class="btn btn-sm btn-outline-primary">Go Back</button> 
+    <h4 id="subject" style="margin-left: 2%; padding-bottom: 10px; align-items: left; color: red; font-size: 40px;"></h4>
+    <h4 id="professor" style="margin-left: 2%; padding-bottom: 10px; align-items: left;"></h4>
+    <h4 id="days" style="margin-left: 2%; padding-bottom: 10px; align-items: left;"></h4>
+    <p id="description" style="margin-left: 2%; padding-bottom: 10px; align-items: left;"></p>
+
+    <hr>
 </div>
 
 

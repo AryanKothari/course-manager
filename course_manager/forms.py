@@ -14,20 +14,12 @@ SUBJECT_CHOICES = [
 
 class NewCourseForm(forms.Form):
     DAYS_OF_WEEK_CHOICES = (
-    ('SUN', 'Sunday'),
     ('MON', 'Monday'),
     ('TUE', 'Tuesday'),
     ('WED', 'Wednesday'),
     ('THU', 'Thursday'),
     ('FRI', 'Friday'),
-    ('SAT', 'Saturday'),
 )
-
-    HOUR_OPTIONS = (('Monday', 'Monday'),
-               ('Tuesday', 'Tuesday'),
-               ('Wednesday', 'Wednesday'),
-               ('Thursday', 'Thursday'),
-               ('Friday', 'Friday'))
 
 
     title = forms.CharField(label="Course Title:", max_length=64, widget=forms.TextInput(attrs={'placeholder': 'Ex. History of Magic 101'}))

@@ -1,12 +1,12 @@
 {% extends "course_manager/layout.html" %}
 
 {% block body %}
-<h2 style="margin-left: 10px; padding-bottom: 10px;">Add Course</h2>
+<h2 style="margin-left: 45%; margin-top: 25px; padding-bottom: 10px; align-items: center;"> <b>Add Course</b></h2>
 <div style="margin-left: 20px; margin-right: 20px;" class="form-group">
     <form action="{% url 'add' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Post"/>
+        <button type="submit" class="btn btn-success" value="Post" style="width: 10%;">Add</button>
     </form>
 </div>
 

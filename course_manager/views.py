@@ -17,8 +17,15 @@ class CourseView(viewsets.ModelViewSet):
 
 def index(request):
     user = request.user
+    courses = user.course.all()
     return render(request, "course_manager/index.html", {
         'user': user,
+        'courses': courses,
+        'courses_mon': courses.filter(day__contains="MON"),
+        'courses_tue': courses.filter(day__contains="TUE"),
+        'courses_wed': courses.filter(day__contains="WED"),
+        'courses_thu': courses.filter(day__contains="THU"),
+        'courses_fri': courses.filter(day__contains="FRI"),
     })
 
 def add(request):

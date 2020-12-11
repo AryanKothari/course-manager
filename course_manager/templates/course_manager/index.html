@@ -1,5 +1,59 @@
 {% extends "course_manager/layout.html" %}
 
 {% block body %}
-
+<h2 style="margin-left: 26%; margin-top: 25px; padding-bottom: 10px; align-items: center;">Hi <b>{{request.user}}</b>, see your enrolled courses here:</h2>
+<div class="container"">
+    <div class="row" style="width: 150%; margin-left: -260px;">
+      <div class="col-sm">
+          <h2 style="margin-left: 30px;"><b>  Monday</b></h2>
+        {% for course in courses_mon %}
+        <div class="alert alert-info block" role="alert" style="width: 90%; height: 25%;">
+          <p style="text-align: center">{{course.title}}</p>
+        </div>
+        {% empty %}
+        <p>no courses for today</p>
+      {% endfor %}
+      </div>
+      <div class="col-sm">
+        <h2><b>  Tuesday</b></h2>
+        {% for course in courses_tue %}
+        <div class="alert alert-info block" role="alert" style="width: 90%; height: 25%;">
+          <p style="text-align: center">{{course.title}}</p>
+        </div>
+        {% empty %}
+        <p>no courses for today</p>
+      {% endfor %}
+      </div>
+      <div class="col-sm">
+        <h2><b>  Wednesday</b></h2>
+        {% for course in courses_wed %}
+        <div class="alert alert-info block" role="alert" style="width: 90%; height: 25%;">
+          <p style="text-align: center">{{course.title}}</p>
+        </div>
+        {% empty %}
+        <p>no courses for today</p>
+      {% endfor %}
+      </div>
+      <div class="col-sm">
+        <h2><b>  Thursday</b></h2>
+        {% for course in courses_thu %}
+        <div class="alert alert-info block" role="alert" style="width: 90%; height: 25%;">
+            <p style="text-align: center">{{course.title}}</p>
+          </div>
+          {% empty %}
+          <p>no courses for today</p>
+        {% endfor %}
+      </div>
+      <div class="col-sm">
+        <h2><b>  Friday</b></h2>
+        {% for course in courses_fri %}
+        <div class="alert alert-info block" role="alert" style="width: 90%; height: 25%;">
+          <p style="text-align: center">{{course.title}}</p>
+        </div>
+        {% empty %}
+        <p>no courses for today</p>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
 {% endblock %}
